@@ -15,30 +15,31 @@ var findMedianSortedArrays = function (nums1, nums2) {
 
 // Optimal: time: O(log(min(m, n))), space: O(1)
 var findMedianSortedArrays = function (nums1, nums2) {
+  // Ensure nums1 is the smaller array
   if (nums1.length > nums2.length) [nums1, nums2] = [nums2, nums1];
-  let m = nums1.length,
-    n = nums2.length;
-  let imin = 0,
-    imax = m,
-    halfLen = Math.floor((m + n + 1) / 2);
-  while (imin <= imax) {
-    let i = Math.floor((imin + imax) / 2);
-    let j = halfLen - i;
-    if (i < m && nums2[j - 1] > nums1[i]) {
-      imin = i + 1;
-    } else if (i > 0 && nums1[i - 1] > nums2[j]) {
-      imax = i - 1;
+  const length1 = nums1.length,
+    length2 = nums2.length;
+  let left = 0,
+    right = length1,
+    partitionSize = Math.floor((length1 + length2 + 1) / 2);
+  while (left <= right) {
+    const partition1 = Math.floor((left + right) / 2);
+    const partition2 = partitionSize - partition1;
+    const maxLeft1 = partition1 === 0 ? -Infinity : nums1[partition1 - 1];
+    const minRight1 = partition1 === length1 ? Infinity : nums1[partition1];
+    const maxLeft2 = partition2 === 0 ? -Infinity : nums2[partition2 - 1];
+    const minRight2 = partition2 === length2 ? Infinity : nums2[partition2];
+    if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
+      if ((length1 + length2) % 2 === 1) {
+        return Math.max(maxLeft1, maxLeft2);
+      }
+      return (
+        (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2
+      );
+    } else if (maxLeft1 > minRight2) {
+      right = partition1 - 1;
     } else {
-      let maxLeft;
-      if (i === 0) maxLeft = nums2[j - 1];
-      else if (j === 0) maxLeft = nums1[i - 1];
-      else maxLeft = Math.max(nums1[i - 1], nums2[j - 1]);
-      if ((m + n) % 2 === 1) return maxLeft;
-      let minRight;
-      if (i === m) minRight = nums2[j];
-      else if (j === n) minRight = nums1[i];
-      else minRight = Math.min(nums1[i], nums2[j]);
-      return (maxLeft + minRight) / 2;
+      left = partition1 + 1;
     }
   }
   return 0;
