@@ -1,0 +1,14 @@
+Hãy giải thich ...
+Tóm tắt lại nội dung này trong một câu trả lời để tôi lưu trữ
+Gắn gọn vừa phải (đừng quá tóm tắt) 
+dễ hiểu đầy đủ ý để làm tài liệu học tập hoặc blog
+Bao gồm cá ý sau 
+Ý tưởng
+Cách hoạt động
+Big O
+Code minh họa (Javascript)
+Thư viện hỗ trợ (Javascript, Java, Python) hoặc Github repo, phần mềm nổi tiếng. Có thể ở trong các ngôn ngữ khác LIÊN HỆ TRỰC TIẾP đến chủ đề này
+Ứng dụng, gải pháp thực tế
+Case study
+Benchmark (nếu có)
+Kết luận
