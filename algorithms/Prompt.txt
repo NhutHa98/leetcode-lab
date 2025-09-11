@@ -12,3 +12,18 @@ Thư viện hỗ trợ (Javascript, Java, Python) hoặc Github repo, phần m�
 Case study
 Benchmark (nếu có)
 Kết luận
+
+
+
+
+
+Write an explain.md file for this LeetCode solution. The explanation must be comprehensive and include:
+
+1. **Idea** – the intuition and reasoning behind the approach, why it works.
+2. A clear step-by-step walkthrough of how the solution works.
+3. The algorithm currently being used, with its name if applicable (e.g., two pointers, binary search, dynamic programming, etc.).
+4. The time complexity and space complexity (Big O notation).
+5. Possible better or alternative solutions (if any), with pros and cons.
+6. Example input/output walkthrough for clarity.
+
+Make sure the explanation is beginner-friendly but still detailed enough for an experienced developer.
