@@ -27,3 +27,5 @@ Write an explain.md file for this LeetCode solution. The explanation must be com
 6. Example input/output walkthrough for clarity.
 
 Make sure the explanation is beginner-friendly but still detailed enough for an experienced developer.
+
+Then Give me 2 more other solution with explain just like above
