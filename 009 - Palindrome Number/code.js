@@ -20,6 +20,22 @@ Time: O(log₁₀ n), n = input number x.
 - Runs for about half the digits.
 Space: O(1), only a few variables used.
 - No string or array allocation.
+
+Eg: 123321
+x = 123321, reversed = 0
+- Iteration 1: reversed = 1, x = 12332
+- Iteration 2: reversed = 12, x = 1233
+- Iteration 3: reversed = 123, x = 123
+- End loop: x = 123, reversed = 123
+- Return true.
+
+Eg: 12321
+x = 12321, reversed = 0
+- Iteration 1: reversed = 1, x = 1232
+- Iteration 2: reversed = 12, x = 123
+- Iteration 3: reversed = 123, x = 12
+- End loop: x = 12, reversed = 123
+- Return true (after removing middle digit).
 */
 var isPalindromeMath = function (x) {
   if (x < 0 || (x % 10 === 0 && x !== 0)) return false;
