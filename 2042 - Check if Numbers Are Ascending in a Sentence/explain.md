@@ -1,6 +1,9 @@
-# 2042. Check if Numbers Are Ascending in a Sentence
+# Check if Numbers Are Ascending in a Sentence - LeetCode 2042
 
-## 1. Idea
+## Overview
+Given a string `sentence` representing a sentence, return `true` if all the numbers in the sentence are in strictly ascending order, otherwise return `false`. A number is a sequence of digits. The goal is to extract all numbers from the sentence and verify they form a strictly increasing sequence.
+
+## Idea
 The goal is to determine if all numbers in a given sentence appear in strictly ascending order. The intuition is to scan the sentence, extract all numbers, and check if each number is greater than the previous one. This works because the problem only cares about the order of numbers, not their position in the sentence.
 
 ## 2. Step-by-Step Walkthrough

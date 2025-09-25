@@ -1,5 +1,10 @@
 
-## Idea (Intuition and Why It Works)
+# Container With Most Water - LeetCode 11
+
+## Overview
+Given `n` non-negative integers `height[0], height[1], ..., height[n-1]` where each represents the height of a vertical line at coordinate `i`, find two lines that together with the x-axis form a container that holds the most water. The goal is to maximize the area of water that can be trapped between any two lines.
+
+## Idea
 
 We want two vertical lines that, together with the x-axis, form a container holding the maximum water. For any pair of indices (i, j), the container area is:
 

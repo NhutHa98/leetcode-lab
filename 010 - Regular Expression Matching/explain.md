@@ -1,14 +1,13 @@
-# 010 — Regular Expression Matching (LeetCode 10)
+# Regular Expression Matching - LeetCode 10
 
-This solution implements full regular expression matching for two special tokens:
+## Overview
+Given an input string `s` and a pattern `p`, implement regular expression matching with support for `.` and `*` where:
 - `.` matches any single character
 - `*` matches zero or more of the preceding element
 
-Given a string `s` and a pattern `p`, return whether `p` matches the entire string `s`.
+The matching should cover the entire input string (not partial). Return `true` if `s` matches `p`, otherwise return `false`.
 
----
-
-## Idea and Intuition
+## Idea
 
 A direct greedy scan is tricky because `*` can match a variable number of characters and choices made early can break later matches. A clean way to model all possibilities is Dynamic Programming (DP):
 

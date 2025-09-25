@@ -1,6 +1,9 @@
-# 3Sum
+# 3Sum - LeetCode 15
 
-## 1. Idea
+## Overview
+Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`. The solution set must not contain duplicate triplets. This is a classic problem that extends the Two Sum concept to three numbers.
+
+## Idea
 We need all unique triplets `(a, b, c)` in the array such that `a + b + c = 0`. A brute-force approach would check every combination of three numbers (O(n^3)), but we can do better by sorting and using the two-pointer technique to reduce complexity to O(n^2).
 
 Key insights:

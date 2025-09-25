@@ -1,6 +1,9 @@
-# Palindrome Linked List – Explanation
+# Palindrome Linked List - LeetCode 234
 
-## 1. Idea
+## Overview
+Given the head of a singly linked list, return `true` if it is a palindrome or `false` otherwise. A palindrome reads the same forward and backward. The challenge is to determine this efficiently for a linked list structure where we can only traverse in one direction.
+
+## Idea
 
 The goal is to determine if a singly linked list is a palindrome (reads the same forwards and backwards). The main challenge is that you can only traverse the list in one direction, and you want to do this efficiently (ideally in O(n) time and O(1) space).
 

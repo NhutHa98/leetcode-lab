@@ -1,8 +1,10 @@
-# String to Integer (atoi) – Solution Explanation
+# String to Integer (atoi) - LeetCode 8
 
-## 1. Idea
+## Overview
+Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s `atoi` function). The function should handle whitespace, optional sign characters, numeric digits, and clamp the result to the 32-bit signed integer range [-2³¹, 2³¹ - 1]. Any characters after the valid integer should be ignored.
 
-The goal is to convert a string to a 32-bit signed integer, emulating the behavior of the C/C++ `atoi` function. The approach is to process the string character by character, handling leading spaces, optional sign, leading zeros, digits, and clamping the result within the valid integer range.
+## Idea
+The main intuition is to **simulate the atoi function step by step**. We process the string character by character in a specific order: skip leading whitespace, handle optional sign, read consecutive digits while checking for overflow. The key insight is that we need to detect overflow before it happens by checking if adding the next digit would exceed the 32-bit integer bounds.
 
 ## 2. Step-by-Step Walkthrough
 
